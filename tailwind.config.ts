@@ -22,11 +22,13 @@ const config = {
         dark: {
           1: "#1C1F2E", // Example dark color for background
           2: "#161925", // background color
-          200: "#334155",
-          300: "#43546B",
+          3: '#252A41',
           400: "#526781",
           500: "#6C8099", // Adjust these values as needed for your dark theme
           
+        },
+        blue:{
+          1: "#0E78F9", // hover color
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
