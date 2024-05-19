@@ -1,6 +1,7 @@
 import React from 'react'
 import {
     Sheet,
+    SheetClose,
     SheetContent,
     SheetDescription,
     SheetHeader,
@@ -8,6 +9,7 @@ import {
     SheetTrigger,
   } from "@/components/ui/sheet"
 import Image from 'next/image'
+import Link from 'next/link'
   
 
 const MobileNav = () => {
@@ -23,14 +25,25 @@ const MobileNav = () => {
             className='cursor-pointer sm:hidden'
             />
          </SheetTrigger>
-         <SheetContent>
-         <SheetHeader>
-             <SheetTitle>Are you absolutely sure?</SheetTitle>
-            <SheetDescription>
-                This action cannot be undone. This will permanently delete your account
-                and remove your data from our servers.
-            </SheetDescription>
-            </SheetHeader>
+         <SheetContent side="left" className='border-none bg-dark-1'>
+             <Link href='/' className='flex items-center gap-1'>
+           <Image
+            src='/public/icons/logo.svg'
+            width={32}
+            height={32}
+            alt='Mungo logo'
+          className='max-sm:size-10'
+            />
+            <p className="text-[26px] font-extrabold text-white">
+              Mungo</p>
+          </Link>
+
+          <div className="flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto">
+            <SheetClose asChild>
+              <section className="flex h-full flex-col gap-6 pt-16 text-white"></section>
+            </SheetClose>
+          </div>
+
         </SheetContent>
         </Sheet>
 
